@@ -12,18 +12,16 @@ def cals(opt_operator, number01, number02):
     elif opt_operator == "division":
         return number01 / number02
 
-
-
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
 
-## 카카오톡 텍스트형 응답
+# 카카오톡 텍스트형 응답
 @app.route('/api/sayHello', methods=['POST'])
 def sayHello():
-    body = request.get_json()
+    body = request.get_json() # 사용자가 입력한 데이터
     print(body)
     print(body['userRequest']['utterance'])
 
@@ -43,7 +41,7 @@ def sayHello():
     return responseBody
 
 
-## 카카오톡 이미지형 응답
+# 카카오톡 이미지형 응답
 @app.route('/api/showHello', methods=['POST'])
 def showHello():
     body = request.get_json()
