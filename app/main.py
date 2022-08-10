@@ -71,13 +71,13 @@ def calCulator():
     body = request.get_json()
     print(body)
     params_df = body['action']['params']
-    print(type(params_df))
+    print(type(params_df)) #dict
     opt_operator = params_df['operators']
     number01 = json.loads(params_df['sys_number01'])['amount']
     number02 = json.loads(params_df['sys_number02'])['amount']
-    print(type(number01))
-    number03=params_df['sys_number01']['amount']
-    print(type(number03))
+    print(type(number01)) #int 
+    # number03=params_df['sys_number01']['amount'] #왜 값이 안나올까?
+    # print(type(number03))
 
     print(opt_operator, type(opt_operator), number01, type(number01))
 
@@ -105,16 +105,19 @@ def whereLive():
     print(body)
     params_df = body['action']['params']
     print(params_df)
+    print(type(params_df))
     
     
     a2=params_df['sys_number_age']
-    print(a2)
-    print(type(a2))
+    print(a2) 
+    print(type(a2)) #str
     a3=params_df['sys_location']
-    print(a3)
-    print(type(a3))
-    print(type(str(a3)))
-    a4= json.load(a3)
+    print(a3) # 서울
+    print(type(a3)) # str
+    # print(type(str(a3)))
+    # a4= json.load(a3) #에러 
+    # print(type(a4))
+    a4 = int(a3)
     print(type(a4))
     
     
