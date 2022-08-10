@@ -120,4 +120,18 @@ def whereLive():
     a4 = int(a2)
     print(type(a4))
     
-    
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": a2,
+                        "text": a3
+                    }
+                }
+            ]
+        }
+    }
+
+    return responseBody
