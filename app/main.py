@@ -73,8 +73,8 @@ def calCulator():
     params_df = body['action']['params']
     print(type(params_df)) #dict
     opt_operator = params_df['operators']
-    number01 = json.loads(params_df['sys_number01'])['amount']
-    number02 = json.loads(params_df['sys_number02'])['amount']
+    number01 = json.loads(params_df['sys_number01']['amount'])
+    number02 = json.loads(params_df['sys_number02']['amount'])
     print(type(number01)) #int 
     # number03=params_df['sys_number01']['amount'] #왜 값이 안나올까?
     # print(type(number03))
