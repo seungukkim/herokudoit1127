@@ -112,8 +112,8 @@ def whereLive():
     print(a2) 
     print(type(a2)) #str
     # a3=params_df['sys_location']#서울
-    a3=json.loads(params_df['sys_location']) #에러 뜸
-    # a3=json.loads(params_df)['sys_location']
+    # a3=json.loads(params_df['sys_location']) #에러 뜸
+    a3=json.loads(params_df)['sys_location']
     print(a3) # 서울
     print(type(a3)) # str
     # print(type(str(a3)))
