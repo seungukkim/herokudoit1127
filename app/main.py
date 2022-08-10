@@ -103,7 +103,8 @@ def calCulator():
 def whereLive():
     body = request.get_json()
     print(body)
-    params_df = body['action']['params']
+    # params_df = body['action']['params']
+    params_df = body['action']
     print(params_df)
     print(type(params_df))
     
@@ -113,7 +114,8 @@ def whereLive():
     print(type(a2)) #str
     # a3=params_df['sys_location']#서울
     # a3=json.loads(params_df['sys_location']) #에러 뜸
-    a3=json.loads(params_df)['sys_location']
+    # a3=json.loads(params_df)['sys_location'] # 에러 뜸
+    a3 = json.loads(params_df['params'])['sys_location']
     print(a3) # 서울
     print(type(a3)) # str
     # print(type(str(a3)))
