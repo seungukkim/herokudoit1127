@@ -100,7 +100,7 @@ def calCulator():
 def whereLive():
     body = request.get_json()
     print(body)
-    params_df = body['action']
+    params_df = body['action']['params']
     print(params_df)
     
     
