@@ -117,7 +117,7 @@ def whereLive():
     # print(type(str(a3)))
     # a4= json.load(a3) #에러 
     # print(type(a4))
-    a4 = int(a3)
+    a4 = int(a2)
     print(type(a4))
     
     
