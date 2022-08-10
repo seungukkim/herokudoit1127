@@ -94,3 +94,9 @@ def calCulator():
     }
 
     return responseBody
+
+# 카카오톡 지역 이름 받아오기
+@app.route('/api/wherelive', methods=['POST'])
+def wherelive():
+    body = request.get_json()
+    print(body)
