@@ -1,0 +1,69 @@
+{
+    "bot":{
+       "id":"62f2f87678a1fc2ba5b20713!",
+       "name":"장학금추천챗봇9"
+    },
+    "intent":{
+       "id":"62f3449b70055f434dccc8b0",
+       "name":"이것저것 받아오기",
+       "extra":{
+          "reason":{
+             "code":1,
+             "message":"OK"
+          }
+       }
+    },
+    "action":{
+       "id":"62f344d7f534cf44c78e693b",
+       "name":"지역 받아오기",
+       "params":{
+          "sys_constant":"고등학생",
+          "sys_number_age":"18",
+          "sys_location":"부산"
+       },
+       "detailParams":{
+          "sys_constant":{
+             "groupName":"",
+             "origin":"고등학생",
+             "value":"고등학생"
+          },
+          "sys_number_age":{
+             "groupName":"",
+             "origin":"18",
+             "value":"18"
+          },
+          "sys_location":{
+             "groupName":"",
+             "origin":"부산",
+             "value":"부산"
+          }
+       },
+       "clientExtra":{
+          
+       }
+    },
+    "userRequest":{
+       "block":{
+          "id":"62f3449b70055f434dccc8b0",
+          "name":"이것저것 받아오기"
+       },
+       "user":{
+          "id":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08",
+          "type":"botUserKey",
+          "properties":{
+             "botUserKey":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08",
+             "bot_user_key":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08"
+          }
+       },
+       "utterance":"고등학생 18 부산",
+       "params":{
+          "surface":"BuilderBotTest",
+          "ignoreMe":"true"
+       },
+       "lang":"kr",
+       "timezone":"Asia/Seoul"
+    },
+    "contexts":[
+       
+    ]
+ }
