@@ -79,35 +79,39 @@ def calCulator():
     # number03=params_df['sys_number01']['amount'] #왜 값이 안나올까?
     # print(type(number03))
 
-    # print(opt_operator, type(opt_operator), number01, type(number01))
+    print(opt_operator, type(opt_operator), number01, type(number01))
 
-    # answer_text = str(cals(opt_operator, number01, number02))
+    answer_text = str(cals(opt_operator, number01, number02))
 
-    # responseBody = {
-    #     "version": "2.0",
-    #     "template": {
-    #         "outputs": [
-    #             {
-    #                 "simpleText": {
-    #                     "text": answer_text
-    #                 }
-    #             }
-    #         ]
-    #     }
-    # }
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": answer_text
+                    }
+                }
+            ]
+        }
+    }
 
-    # return responseBody
+    return responseBody
 
 # 카카오톡 지역 이름 받아오기
 @app.route('/api/whereLive', methods=['POST'])
 def whereLive():
     body = request.get_json()
     print(body)
-    # params_df = body['action']['params']
-    params_df = body['action']
-    print(params_df)
-    print(type(params_df))
-    
+    # # params_df = body['action']['params']
+    # params_df = body['action']
+    # print(params_df)
+    # print(type(params_df))
+    # params_df
+    param_df=json.loads(body)
+    a1=param_df['action']
+    print(a1)
+    print(type(a1))
     
     # a2=params_df['sys_number_age']
     # print(a2) 
@@ -116,8 +120,8 @@ def whereLive():
     # a3=json.loads(params_df['sys_location']) #에러 뜸
     # a3=json.loads(params_df)['sys_location'] # 에러 뜸
     # a3 = json.loads(params_df['params'])['sys_location']# 에러 뜸
-    print(a3) # 서울
-    print(type(a3)) # str
+    # print(a3) # 서울
+    # print(type(a3)) # str
     # print(type(str(a3)))
     # a4= json.load(a3) #에러 
     # print(type(a4))
