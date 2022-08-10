@@ -79,24 +79,24 @@ def calCulator():
     # number03=params_df['sys_number01']['amount'] #왜 값이 안나올까?
     # print(type(number03))
 
-    print(opt_operator, type(opt_operator), number01, type(number01))
+    # print(opt_operator, type(opt_operator), number01, type(number01))
 
-    answer_text = str(cals(opt_operator, number01, number02))
+    # answer_text = str(cals(opt_operator, number01, number02))
 
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                    "simpleText": {
-                        "text": answer_text
-                    }
-                }
-            ]
-        }
-    }
+    # responseBody = {
+    #     "version": "2.0",
+    #     "template": {
+    #         "outputs": [
+    #             {
+    #                 "simpleText": {
+    #                     "text": answer_text
+    #                 }
+    #             }
+    #         ]
+    #     }
+    # }
 
-    return responseBody
+    # return responseBody
 
 # 카카오톡 지역 이름 받아오기
 @app.route('/api/whereLive', methods=['POST'])
@@ -115,7 +115,7 @@ def whereLive():
     # a3=params_df['sys_location']#서울
     # a3=json.loads(params_df['sys_location']) #에러 뜸
     # a3=json.loads(params_df)['sys_location'] # 에러 뜸
-    a3 = json.loads(params_df['params'])['sys_location']
+    # a3 = json.loads(params_df['params'])['sys_location']# 에러 뜸
     print(a3) # 서울
     print(type(a3)) # str
     # print(type(str(a3)))
