@@ -111,15 +111,16 @@ def whereLive():
     a2=params_df['sys_number_age']
     print(a2) 
     print(type(a2)) #str
-    a3=json.loads(params_df['sys_location'])
+    # a3=params_df['sys_location']#서울
+    a3=json.loads(params_df['sys_location']) #에러 뜸
     # a3=json.loads(params_df)['sys_location']
     print(a3) # 서울
     print(type(a3)) # str
     # print(type(str(a3)))
     # a4= json.load(a3) #에러 
     # print(type(a4))
-    a4 = int(a2)
-    print(type(a4))
+    # a4 = int(a2)
+    # print(type(a4))
     
     # responseBody = {
     #     "version": "2.0",
@@ -135,4 +136,4 @@ def whereLive():
     #     }
     # }
 
-    return responseBody
+    # return responseBody
