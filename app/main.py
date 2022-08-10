@@ -75,7 +75,9 @@ def calCulator():
     opt_operator = params_df['operators']
     number01 = json.loads(params_df['sys_number01'])['amount']
     number02 = json.loads(params_df['sys_number02'])['amount']
+    print(type(params_df['sys_number01']))
     print(type(number01)) #int 
+    
     # number03=params_df['sys_number01']['amount'] #왜 값이 안나올까?
     # print(type(number03))
 
