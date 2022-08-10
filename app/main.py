@@ -103,8 +103,8 @@ def wherelive():
     params_df = body['action']['params']
     print(type(params_df))
     
-    age = json.loads(params_df)['sys_number_age']
-    location = json.loads(params_df)['sys_location']
+    age = json.loads(params_df['sys_number_age'])
+    location = json.loads(params_df['sys_location'])
     print(age,type(age),location,type(location))
     answer_text=str(age,location)
     responseBody = {
