@@ -106,4 +106,18 @@ def wherelive():
     age = json.loads(params_df)['sys_number_age']
     location = json.loads(params_df)['sys_location']
     print(age,type(age),location,type(location))
+    answer_text=str(age,location)
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": answer_text
+                    }
+                }
+            ]
+        }
+    }
 
+    return responseBody
