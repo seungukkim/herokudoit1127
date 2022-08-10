@@ -75,6 +75,9 @@ def calCulator():
     opt_operator = params_df['operators']
     number01 = json.loads(params_df['sys_number01'])['amount']
     number02 = json.loads(params_df['sys_number02'])['amount']
+    print(type(number01))
+    number03=params_df['sys_number01']['amount']
+    print(type(number03))
 
     print(opt_operator, type(opt_operator), number01, type(number01))
 
@@ -111,6 +114,7 @@ def whereLive():
     print(a3)
     print(type(a3))
     print(type(str(a3)))
-    
+    a4= json.load(a3)
+    print(type(a4))
     
     
