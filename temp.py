@@ -1,7 +1,7 @@
 import json
 
 with open('temp.json','r',encoding='utf-8') as file:
-    data = json.load(file)
+    data = json.loads(file)
     data2=data['action']['detailParams']
     school=data2['sys_constant']['value']
     age = data2['sys_number_age']
@@ -15,3 +15,5 @@ with open('temp.json','r',encoding='utf-8') as file:
     print(type(age))
     print(type(age2))
     print(type(location))
+    location1=data['action']['params']['sys_location']
+    print(type(location1))
