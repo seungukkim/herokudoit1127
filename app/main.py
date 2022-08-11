@@ -119,22 +119,23 @@ def whereLive():
     # temp2=json.loads(params_df['sys_location']) # 에러
     # print(temp2)
     temp3 =params_df['sys_number_age']
-    print(temp3)
+    print(temp3) # 29
     temp4= params_df['sys_location']
-    print(temp4)
-    # responseBody = {
-    #     "version": "2.0",
-    #     "template": {
-    #         "outputs": [
-    #             {
-    #                 "simpleText": {
-    #                     "text": temp2
-    #                 }
-    #             }
-    #         ]
-    #     }
-    # }
+    print(temp4) #서울
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": temp3,
+                        "text": temp4
+                    }
+                }
+            ]
+        }
+    }
 
-    # return responseBody
+    return responseBody
     
 
