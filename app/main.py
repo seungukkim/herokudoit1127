@@ -114,8 +114,8 @@ def whereLive():
     # print(type(body['action']['params']))# dict
     # print(type(body['action']['params']['sys_number_age'])) #str
     params_df=body['action']['params']
-    temp1=json.loads(params_df['sys_number_age'])
-    # temp2=json.loads(params_df['sys_location'])
+    # temp1=json.loads(params_df['sys_number_age'])
+    temp2=json.loads(params_df['sys_location'])
     # params_df = body['action']['detailParams']
     # print(type(params_df))
     
@@ -128,7 +128,7 @@ def whereLive():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": temp1
+                        "text": temp2
                     }
                 }
             ]
