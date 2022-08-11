@@ -114,63 +114,21 @@ def whereLive():
     # print(type(body['action']['params']))# dict
     # print(type(body['action']['params']['sys_number_age'])) #str
     params_df=body['action']['params']
-    # temp1=json.loads(params_df['sys_number_age'])
-    temp2=json.load(params_df['sys_location'])
-    # params_df = body['action']['detailParams']
-    # print(type(params_df))
-    
-    # age = json.loads(params_df['sys_number_age'])['value']
-    # location = json.loads(params_df['sys_location'])['value']
-    # print(age,type(age),location,type(location))
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                    "simpleText": {
-                        "text": temp2
-                    }
-                }
-            ]
-        }
-    }
-
-    return responseBody
-    
-
-    # # params_df = body['action']['params']
-    # params_df = body['action']
-    # print(params_df)
-    # print(type(params_df))
-    # # params_df
-    # param_df=json.loads(body)
-    # a1=param_df['action']
-    # print(a1)
-    # print(type(a1))
-    
-    # a2=params_df['sys_number_age']
-    # print(a2) 
-    # print(type(a2)) #str
-    # a3=params_df['sys_location']#서울
-    # a3=json.loads(params_df['sys_location']) #에러 뜸
-    # a3=json.loads(params_df)['sys_location'] # 에러 뜸
-    # a3 = json.loads(params_df['params'])['sys_location']# 에러 뜸
-    # print(a3) # 서울
-    # print(type(a3)) # str
-    # print(type(str(a3)))
-    # a4= json.load(a3) #에러 
-    # print(type(a4))
-    # a4 = int(a2)
-    # print(type(a4))
-    
+    temp1=json.loads(params_df['sys_number_age'])
+    print(temp1)
+    temp2=json.loads(params_df['sys_location'])
+    print(temp2)
+    temp3 =params_df['sys_number_age']
+    print(temp3)
+    temp4= params_df['sys_location']
+    print(temp4)
     # responseBody = {
     #     "version": "2.0",
     #     "template": {
     #         "outputs": [
     #             {
     #                 "simpleText": {
-    #                     "text": a2,
-    #                     "text": a3
+    #                     "text": temp2
     #                 }
     #             }
     #         ]
@@ -178,4 +136,5 @@ def whereLive():
     # }
 
     # return responseBody
+    
 
