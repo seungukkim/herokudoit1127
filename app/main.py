@@ -107,7 +107,7 @@ def whereLive():
     print(body)
     print(type(body))
     print(type(body['action']))
-    print(type(body['action']['detailParmas']))
+    print(type(body['action']['detailParams']))
     print(type(body['action']['detailParams']['sys_number_age']))
     print(type(body['action']['detailParams']['sys_number_age']['value']))
 
