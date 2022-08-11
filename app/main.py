@@ -1,3 +1,4 @@
+from cgi import parse_multipart
 from flask import Flask, request
 import json
 
@@ -114,8 +115,9 @@ def whereLive():
     # print(type(body['action']['params']))# dict
     # print(type(body['action']['params']['sys_number_age'])) #str
     params_df=body['action']['params']
+    print(params_df)
     temp1=json.loads(params_df['sys_number_age'])
-    print(temp1) #29살
+    print(temp1) #29
     # temp2=json.loads(params_df['sys_location']) # 에러
     # print(temp2)
     temp3 =params_df['sys_number_age']
