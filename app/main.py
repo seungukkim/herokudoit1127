@@ -121,8 +121,8 @@ def whereLive():
 
     advantage=params_df['advantage']
     print(advantage)
-    
-    age=params_df['sys_number']['amount']
+
+    age=json.loads(params_df['sys_number'])['amount']
     print(age)
    
 
