@@ -116,8 +116,12 @@ def whereLive():
     # print(type(body['action']['params']['sys_number_age'])) #str
     params_df=body['action']['params']
     print(params_df)
-    temp1=json.loads(params_df['sys_number_01'])
+    temp1=json.loads(params_df['sys_number_01'])['amount']
     print(temp1) #29
+    print(type(temp1))
+    temp2=params_df['sys_text']
+    print(temp2)
+    print(type(temp2))
     # temp2=json.loads(params_df['sys_location']) # 에러
     # print(temp2)
     # temp3 =params_df['sys_number_age']
