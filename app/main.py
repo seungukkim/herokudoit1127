@@ -71,10 +71,15 @@ def calCulator():
     body = request.get_json()
     print(body)
     params_df = body['action']['params']
-    print(type(params_df))
+    print(type(params_df)) #dict
     opt_operator = params_df['operators']
     number01 = json.loads(params_df['sys_number01'])['amount']
     number02 = json.loads(params_df['sys_number02'])['amount']
+    print(type(params_df['sys_number01']))
+    print(type(number01)) #int 
+    
+    # number03=params_df['sys_number01']['amount'] #왜 값이 안나올까?
+    # print(type(number03))
 
     print(opt_operator, type(opt_operator), number01, type(number01))
 
@@ -100,6 +105,7 @@ def calCulator():
 def whereLive():
     body = request.get_json()
     print(body)
+
     params_df = body['action']['detailParams']
     print(type(params_df))
     
@@ -108,3 +114,45 @@ def whereLive():
     print(age,type(age),location,type(location))
     
     
+
+    # # params_df = body['action']['params']
+    # params_df = body['action']
+    # print(params_df)
+    # print(type(params_df))
+    # # params_df
+    # param_df=json.loads(body)
+    # a1=param_df['action']
+    # print(a1)
+    # print(type(a1))
+    
+    # a2=params_df['sys_number_age']
+    # print(a2) 
+    # print(type(a2)) #str
+    # a3=params_df['sys_location']#서울
+    # a3=json.loads(params_df['sys_location']) #에러 뜸
+    # a3=json.loads(params_df)['sys_location'] # 에러 뜸
+    # a3 = json.loads(params_df['params'])['sys_location']# 에러 뜸
+    # print(a3) # 서울
+    # print(type(a3)) # str
+    # print(type(str(a3)))
+    # a4= json.load(a3) #에러 
+    # print(type(a4))
+    # a4 = int(a2)
+    # print(type(a4))
+    
+    # responseBody = {
+    #     "version": "2.0",
+    #     "template": {
+    #         "outputs": [
+    #             {
+    #                 "simpleText": {
+    #                     "text": a2,
+    #                     "text": a3
+    #                 }
+    #             }
+    #         ]
+    #     }
+    # }
+
+    # return responseBody
+
