@@ -122,13 +122,14 @@ def whereLive():
     print(temp3) # 29
     temp4= params_df['sys_location']
     print(temp4) #서울
+
+
     responseBody = {
         "version": "2.0",
         "template": {
             "outputs": [
                 {
                     "simpleText": {
-                        "text": temp3,
                         "text": temp4
                     }
                 }
