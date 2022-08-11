@@ -106,21 +106,25 @@ def calCulator():
 def whereLive():
     body = request.get_json()
     print(body)
-    # print(type(body))#dict
-    # print(type(body['action']))#dict
-    # print(type(body['action']['detailParams']))#dict
-    # print(type(body['action']['detailParams']['sys_number_age']))#dict
-    # print(type(body['action']['detailParams']['sys_number_age']['value'])) #str
 
-    # print(type(body['action']['params']))# dict
-    # print(type(body['action']['params']['sys_number_age'])) #str
     params_df=body['action']['params']
-    age=params_df['sys_number']['amount']
+    print(params_df)
+    
     job=params_df['job']
+    print(job)
+
     location=params_df['location']
+    print(location)
+
     position=params_df['position']
+    [print(position)]
+
     advantage=params_df['advantage']
-    print(age,job,location,position,advantage)
+    print(advantage)
+    
+    age=params_df['sys_number']['amount']
+    print(age)
+   
 
 
     
