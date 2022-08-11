@@ -17,19 +17,37 @@
       "id":"62f344d7f534cf44c78e693b",
       "name":"지역 받아오기",
       "params":{
-         "sys_number_01":"{\"amount\": 29, \"unit\": null}",
-         "sys_text":"서울"
+         "location":"울산",
+         "job":"대학생",
+         "advantage":"생활비지원",
+         "position":"1분위",
+         "sys_number":"{\"amount\": 29, \"unit\": null}"
       },
       "detailParams":{
-         "sys_number_01":{
+         "location":{
+            "groupName":"",
+            "origin":"울산",
+            "value":"울산"
+         },
+         "job":{
+            "groupName":"",
+            "origin":"대딩",
+            "value":"대학생"
+         },
+         "advantage":{
+            "groupName":"",
+            "origin":"생활비",
+            "value":"생활비지원"
+         },
+         "position":{
+            "groupName":"",
+            "origin":"1분위",
+            "value":"1분위"
+         },
+         "sys_number":{
             "groupName":"",
             "origin":"29",
             "value":"{\"amount\": 29, \"unit\": null}"
-         },
-         "sys_text":{
-            "groupName":"",
-            "origin":"서울",
-            "value":"서울"
          }
       },
       "clientExtra":{
@@ -49,7 +67,8 @@
             "bot_user_key":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08"
          }
       },
-      "utterance":"29 서울\n",
+      "utterance":"29 대딩 울산 1분
+위 생활비\n",
       "params":{
          "surface":"BuilderBotTest",
          "ignoreMe":"true"
