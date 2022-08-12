@@ -1,69 +1,48 @@
 {
-    "bot":{
-       "id":"62f2f87678a1fc2ba5b20713!",
-       "name":"장학금추천챗봇9"
-    },
-    "intent":{
-       "id":"62f3252c78a1fc2ba5b20cb8",
-       "name":"사칙연산",
-       "extra":{
-          "reason":{
-             "code":1,
-             "message":"OK"
-          }
+   "version": "2.0",
+   "template": {
+     "outputs": [
+       {
+         "carousel": {
+           "type": "listCard",
+           "items": [
+             {
+               "header": {
+                 "title": "샌드위치"
+               },
+               "items": [
+                 {
+                   "title": "햄치즈",
+                   "description": "4,500원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_01.jpg"
+                 },
+                 {
+                   "title": "베이컨 아보카도",
+                   "description": "5,500원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_02.jpg"
+                 },
+                 {
+                   "title": "에그 포테이토",
+                   "description": "5,300원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_03.jpg"
+                 },
+                 {
+                   "title": "갈릭 베이컨 토마토",
+                   "description": "5,800원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_04.jpg"
+                 }
+               ],
+               "buttons": [
+                 {
+                   "label": "더보기",
+                   "action": "message",
+                   "messageText" : "샌드위치 더보기"
+                 }
+               ]
+             }           
+           ]
+         }
        }
-    },
-    "action":{
-       "id":"62f321ccf534cf44c78e6315",
-       "name":"사칙 연산 텍스트 응답",
-       "params":{
-          "sys_number01":"{\"amount\": 7, \"unit\": null}",
-          "sys_number02":"{\"amount\": 17, \"unit\": null}",
-          "operators":"addition"
-       },
-       "detailParams":{
-          "sys_number01":{
-             "groupName":"",
-             "origin":"7",
-             "value":"{\"amount\": 7, \"unit\": null}"
-          },
-          "sys_number02":{
-             "groupName":"",
-             "origin":"17",
-             "value":"{\"amount\": 17, \"unit\": null}"
-          },
-          "operators":{
-             "groupName":"",
-             "origin":"더하기",
-             "value":"addition"
-          }
-       },
-       "clientExtra":{
-          
-       }
-    },
-    "userRequest":{
-       "block":{
-          "id":"62f3252c78a1fc2ba5b20cb8",
-          "name":"사칙연산"
-       },
-       "user":{
-          "id":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08",
-          "type":"botUserKey",
-          "properties":{
-             "botUserKey":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08",
-             "bot_user_key":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08"
-          }
-       },
-       "utterance":"7 더하기 17\n",
-       "params":{
-          "surface":"BuilderBotTest",
-          "ignoreMe":"true"
-       },
-       "lang":"kr",
-       "timezone":"Asia/Seoul"
-    },
-    "contexts":[
-       
-    ]
+     ]   
+   }
  }
