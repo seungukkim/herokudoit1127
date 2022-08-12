@@ -27,39 +27,17 @@ def sayHello():
     print(body['userRequest']['utterance'])
 
     responseBody = {
-   "version": "2.0",
-   "template": {
-     "outputs": [
-       {
-         "carousel": {
-           "type": "listCard",
-           "items": [
-             {
-               "header": {
-                 "title": "샌드위치"
-               },
-               "items": [
-                 
-                 {
-                   "title": "갈릭 베이컨 토마토",
-                   "description": "5,800원",
-                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_04.jpg"
-                 }
-               ],
-               "buttons": [
-                 {
-                   "label": "더보기",
-                   "action": "message",
-                   "messageText" : "샌드위치 더보기1"
-                 }
-               ]
-             }           
-           ]
-         }
-       }
-     ]
-   }
- }
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": "안녕 hello I'm Ryan"
+                    }
+                }
+            ]
+        }
+    }
 
     return responseBody
 
@@ -94,53 +72,17 @@ def showHello():
     print(body['userRequest']['utterance'])
 
     responseBody = {
-  "version": "2.0",
-  "template": {
-    "outputs": [
-      {
-        "carousel": {
-          "type": "listCard",
-          "items": [
-            {
-              "header": {
-                "title": "샌드위치"
-              },
-              "items": [
+        "version": "2.0",
+        "template": {
+            "outputs": [
                 {
-                  "title": "햄치즈",
-                  "description": "4,500원",
-                  "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_01.jpg"
-                },
-                {
-                  "title": "베이컨 아보카도",
-                  "description": "5,500원",
-                  "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_02.jpg"
-                },
-                {
-                  "title": "에그 포테이토",
-                  "description": "5,300원",
-                  "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_03.jpg"
-                },
-                {
-                  "title": "갈릭 베이컨 토마토",
-                  "description": "5,800원",
-                  "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_04.jpg"
+                    "simpleText": {
+                        "text": "안녕 hello I'm Ryan"
+                    }
                 }
-              ],
-              "buttons": [
-                {
-                  "label": "더보기",
-                  "action": "message",
-                  "messageText" : "샌드위치 더보기"
-                }
-              ]
-            }           
-          ]
+            ]
         }
-      }
-    ]
-  }
-}
+    }
 
     return responseBody
 
