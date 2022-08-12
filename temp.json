@@ -1,82 +1,34 @@
 {
-   "bot":{
-      "id":"62f2f87678a1fc2ba5b20713!",
-      "name":"장학금추천챗봇9"
-   },
-   "intent":{
-      "id":"62f3449b70055f434dccc8b0",
-      "name":"이것저것 받아오기",
-      "extra":{
-         "reason":{
-            "code":1,
-            "message":"OK"
+   "version": "2.0",
+   "template": {
+     "outputs": [
+       {
+         "carousel": {
+           "type": "listCard",
+           "items": [
+             {
+               "header": {
+                 "title": "샌드위치"
+               },
+               "items": [
+                 
+                 {
+                   "title": "갈릭 베이컨 토마토",
+                   "description": "5,800원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_04.jpg"
+                 }
+               ],
+               "buttons": [
+                 {
+                   "label": "더보기",
+                   "action": "message",
+                   "messageText" : "샌드위치 더보기"
+                 }
+               ]
+             }           
+           ]
          }
-      }
-   },
-   "action":{
-      "id":"62f344d7f534cf44c78e693b",
-      "name":"지역 받아오기",
-      "params":{
-         "location":"울산",
-         "job":"대학생",
-         "advantage":"생활비지원",
-         "position":"1분위",
-         "sys_number":"{\"amount\": 29, \"unit\": null}"
-      },
-      "detailParams":{
-         "location":{
-            "groupName":"",
-            "origin":"울산",
-            "value":"울산"
-         },
-         "job":{
-            "groupName":"",
-            "origin":"대딩",
-            "value":"대학생"
-         },
-         "advantage":{
-            "groupName":"",
-            "origin":"생활비",
-            "value":"생활비지원"
-         },
-         "position":{
-            "groupName":"",
-            "origin":"1분위",
-            "value":"1분위"
-         },
-         "sys_number":{
-            "groupName":"",
-            "origin":"29",
-            "value":"{\"amount\": 29, \"unit\": null}"
-         }
-      },
-      "clientExtra":{
-         
-      }
-   },
-   "userRequest":{
-      "block":{
-         "id":"62f3449b70055f434dccc8b0",
-         "name":"이것저것 받아오기"
-      },
-      "user":{
-         "id":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08",
-         "type":"botUserKey",
-         "properties":{
-            "botUserKey":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08",
-            "bot_user_key":"38d01e9257015a92b062ee8317919820a721b38f544fe0029f4b38ab347bc44e08"
-         }
-      },
-      "utterance":"29 대딩 울산 1분
-위 생활비\n",
-      "params":{
-         "surface":"BuilderBotTest",
-         "ignoreMe":"true"
-      },
-      "lang":"kr",
-      "timezone":"Asia/Seoul"
-   },
-   "contexts":[
-      
-   ]
-}
+       }
+     ]
+   }
+ }

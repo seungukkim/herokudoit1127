@@ -27,6 +27,50 @@ def sayHello():
     print(body['userRequest']['utterance'])
 
     responseBody = {
+   "version": "2.0",
+   "template": {
+     "outputs": [
+       {
+         "carousel": {
+           "type": "listCard",
+           "items": [
+             {
+               "header": {
+                 "title": "샌드위치"
+               },
+               "items": [
+                 
+                 {
+                   "title": "갈릭 베이컨 토마토",
+                   "description": "5,800원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_04.jpg"
+                 }
+               ],
+               "buttons": [
+                 {
+                   "label": "더보기",
+                   "action": "message",
+                   "messageText" : "샌드위치 더보기1"
+                 }
+               ]
+             }           
+           ]
+         }
+       }
+     ]
+   }
+ }
+
+    return responseBody
+
+# 카카오톡 실험용
+@app.route('/api/sayHello1', methods=['POST'])
+def sayHello():
+    body = request.get_json() # 사용자가 입력한 데이터
+    print(body)
+    print(body['userRequest']['utterance'])
+
+    responseBody = {
         "version": "2.0",
         "template": {
             "outputs": [
