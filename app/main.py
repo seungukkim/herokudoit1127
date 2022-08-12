@@ -64,7 +64,7 @@ def sayHello():
     return responseBody
 
 # 카카오톡 실험용
-@app.route('/api/sayHello1', methods=['POST'])
+@app.route('/api/sayBye', methods=['POST'])
 def sayHello():
     body = request.get_json() # 사용자가 입력한 데이터
     print(body)
