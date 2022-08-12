@@ -87,18 +87,48 @@ def showHello():
     print(body['userRequest']['utterance'])
 
     responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                    "simpleImage": {
-                        "imageUrl": "https://t1.daumcdn.net/friends/prod/category/M001_friends_ryan2.jpg",
-                        "altText": "hello I'm Ryan"
-                    }
-                }
-            ]
-        }
-    }
+   "version": "2.0",
+   "template": {
+     "outputs": [
+       {
+         "carousel": {
+           "type": "listCard",
+           "items": [
+             {
+               "header": {
+                 "title": "샌드위치"
+               },
+               "items": [
+                 {
+                   "title": "햄치즈",
+                   "description": "4,500원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_01.jpg"
+                 },
+                 {
+                   "title": "베이컨 아보카도",
+                   "description": "5,500원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_02.jpg"
+                 },
+                 {
+                   "title": "에그 포테이토",
+                   "description": "5,300원",
+                   "imageUrl": "https://t1.kakaocdn.net/openbuilder/docs_image/02_img_03.jpg"
+                 }
+               ],
+               "buttons": [
+                 {
+                   "label": "더보기",
+                   "action": "message",
+                   "messageText" : "샌드위치 더보기"
+                 }
+               ]
+             }           
+           ]
+         }
+       }
+     ]   
+   }
+ }
 
     return responseBody
 
