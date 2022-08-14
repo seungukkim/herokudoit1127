@@ -171,6 +171,9 @@ def calCulator():
 
 
 
-    
-    
+# 카카오톡 Calculator 계산기 응답
+@app.route('/api/orderyes', methods=['POST'])
 
+def orderyes():
+    body = request.get_json()
+    print(body)
