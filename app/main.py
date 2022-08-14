@@ -182,3 +182,20 @@ def orderyes():
     type=params_df['피자종류']
     print(location)
     print(type)
+    location = str(location)
+    type = str(type)
+
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": location +"으로"+ type +"을 배달"
+                    }
+                }
+            ]
+        }
+    }
+
+    return responseBody
