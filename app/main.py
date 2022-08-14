@@ -177,3 +177,8 @@ def calCulator():
 def orderyes():
     body = request.get_json()
     print(body)
+    params_df=body['action']['params']
+    location=params_df['sys_text']
+    type=params_df['피자종류']
+    print(location)
+    print(type)
