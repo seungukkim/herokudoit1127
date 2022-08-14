@@ -199,3 +199,9 @@ def orderyes():
     }
 
     return responseBody
+  
+  # 카카오톡 Calculator 계산기 응답
+@app.route('/api/ashibal', methods=['POST'])
+def ashibal():
+  body = request.get_json()
+  print(body)
