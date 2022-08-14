@@ -171,14 +171,14 @@ def calCulator():
 
 
 
-# # 카카오톡 Calculator 계산기 응답
-# @app.route('/api/orderyes', methods=['POST'])
+# 카카오톡 Calculator 계산기 응답
+@app.route('/api/orderyes', methods=['POST'])
 
-# def orderyes():
-#     body = request.get_json()
-#     print(body)
-#     # params_df=body['action']['params']
-#     # location=params_df['sys_text']
-#     # type=params_df['피자종류']
-#     # print(location)
-#     # print(type)
+def orderyes():
+    body = request.get_json()
+    print(body)
+    params_df=body['action']['params']
+    location=params_df['sys_text']
+    type=params_df['피자종류']
+    print(location)
+    print(type)
